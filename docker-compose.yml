@@ -1,0 +1,11 @@
+services:
+  postgres:
+    image: postgres:11.4
+    container_name: my-books_database
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: library
+    ports:
+      - 5432:5432
